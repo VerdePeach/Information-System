@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="446.0" prefWidth="730.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.labs.group8.view.BookOverviewController">
+   <children>
+      <SplitPane dividerPositions="0.7189973614775725" prefHeight="514.0" prefWidth="760.0" AnchorPane.bottomAnchor="-68.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-30.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="bookTable" layoutX="-2.0" prefHeight="512.0" prefWidth="547.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="-4.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="authorColumn" prefWidth="75.0" text="Author" />
+                      <TableColumn fx:id="bookNameColumn" prefWidth="97.0" text="Book name" />
+                        <TableColumn fx:id="year" prefWidth="75.0" text="Year" />
+                        <TableColumn fx:id="pages" prefWidth="75.0" text="Pages" />
+                        <TableColumn fx:id="number" prefWidth="75.0" text="Number" />
+                        <TableColumn fx:id="publ" prefWidth="82.0" text="Published" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="421.0" prefWidth="291.0" />
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

@@ -29,6 +29,8 @@ public class Client {
     private static final Logger LOGGER = LogManager.getLogger(Client.class);
 
     public static void main(String[] args) {
+
+
         int indexOne = 1;
         add();
 //        loadSavedData();
@@ -48,7 +50,7 @@ public class Client {
 //        System.out.println(list);
 //        System.out.println(list2);
     }
-    //
+
     private static void edit(int index) {
         try( Socket socket = new Socket("localhost", PORT);
              OutputStreamWriter outputStreamWriter = new OutputStreamWriter(socket.getOutputStream())
@@ -97,7 +99,7 @@ public class Client {
             JAXBContext bookContext = JAXBContext.newInstance(Books.class);
             Marshaller bookMarshaller = bookContext.createMarshaller();
 
-            Book book = new Book("Game", "Vasyan", LocalDate.parse("2000-10-10"), 1000);
+            Book book = new Book("Game1", "Vasyan", LocalDate.parse("2000-10-10"), 1000);
 
             outputStreamWriter.write("add");
             bookMarshaller.marshal(book, outputStreamWriter);
